@@ -6,7 +6,7 @@ path = r"data/speeches.txt"
 with open(path, "rb") as f:
     # decoding the bytes into a string
     text = f.read().decode()
-order = 17
+order = 13
 length = 5000
 model = ngram.train_lm(text, order)
 
