@@ -1,0 +1,2 @@
+# InspirationBot
+Generate inspiring quotes
