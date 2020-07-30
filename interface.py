@@ -13,3 +13,20 @@ model = ngram.train_lm(text, order)
 result = generate.generate_text(model, order, nletters=length)
 
 print(result)
+
+"""
+test to speech, you need to pip install pyttsx3
+"""
+
+import pyttsx3
+
+engine = pyttsx3.init()
+
+voices = engine.getProperty('voices')
+converter = pyttsx3.init() 
+
+converter.setProperty('rate', 350) 
+
+engine.setProperty('voice', voices[0].id) 
+engine.say(result)
+engine.runAndWait()
